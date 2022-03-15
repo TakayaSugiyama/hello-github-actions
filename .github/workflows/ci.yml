@@ -9,10 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@2
       - name: Set Node.js
-          uses: actions/setup-node@2
-          with:
-            node-version: "16.14.0"
-            cache: 'npm'
+        uses: actions/setup-node@2
+        with:
+          node-version: "16.14.0"
+          cache: 'npm'
       - name: Install Dependencies
         run: npm ci
       - name: Test
