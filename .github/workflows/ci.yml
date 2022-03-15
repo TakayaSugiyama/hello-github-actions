@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@2
       - name: Set Node.js
-          uses: actions/nodeup-node@2
+          uses: actions/setup-node@2
           with:
             node-version: "16.14.0"
             cache: 'npm'
