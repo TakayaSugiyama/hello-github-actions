@@ -17,3 +17,18 @@ jobs:
         run: npm ci
       - name: Test
         run: npm test
+  lint:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.0
+      - name: Set Node.js
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: 16.x
+          cache: npm
+      - name: Install Dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
